@@ -1,0 +1,16 @@
+PODS:
+  - PPCatalystTool (1.0.0)
+
+DEPENDENCIES:
+  - PPCatalystTool (from `../`)
+
+EXTERNAL SOURCES:
+  PPCatalystTool:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PPCatalystTool: 01ed8825acd96d81330898fa20f2ed6143fa14ae
+
+PODFILE CHECKSUM: 608107cdc62d54a795e106df4a0c0b2d62065cc9
+
+COCOAPODS: 1.11.3
