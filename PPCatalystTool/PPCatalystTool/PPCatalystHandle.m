@@ -111,6 +111,22 @@ static PPCatalystHandle *_instance;
 #endif
 }
 
+- (NSURL *)selectFolderWithPath:(NSString *)folderPath {
+
+#if TARGET_OS_MACCATALYST
+    NSString *selectorString = @"selectFolderWithPath:";
+
+    Class bundleClass= [self getBundleClassWithName:bundlePluginClassName];
+
+    NSURL *selectedFileURL = [self performSelfMethodWithString:selectorString target:bundleClass object:folderPath];
+    NSLog(@"我选中了%@", selectedFileURL);
+
+    return selectedFileURL;
+#else
+    return nil;
+#endif
+}
+
 /// 执行自定义方法
 - (id)performSelfMethodWithString:(NSString *)funcString target:(id)target object:(id)object {
     if (nil == funcString || funcString.length == 0) {
