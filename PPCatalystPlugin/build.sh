@@ -31,7 +31,7 @@ BUNDLE_DEVICE_DIR=${WRK_DIR}/Release/${BUNDLE_NAME}.bundle
 echo "BUNDLE_DEVICE_DIR: ${BUNDLE_DEVICE_DIR}"
 
 # 编译资源文件bundle
-xcodebuild -configuration "Release" -target "${BUNDLE_NAME}" -sdk macosx build -UseModernBuildSystem=NO
+xcodebuild -configuration "Release" -target "${BUNDLE_NAME}" # -sdk macosx build -UseModernBuildSystem=NO
  
 # 最终 资源文件 输出的文件路径
 BUNDLE_INSTALL_DIR=${UNIVERSAL_OUTPUT_FOLDER}/${BUNDLE_FILENAME}

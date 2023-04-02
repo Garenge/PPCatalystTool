@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)openFileOrDirWithPath:(NSString *)path;
 + (BOOL)openFileOrDirWithPath:(NSString *)path;
 + (NSURL *)selectSingleFileWithFolderPath:(NSString *)folderPath;
++ (NSURL *)selectFolderWithPath:(NSString *)folderPath;
 
 @end
 

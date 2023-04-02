@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3315A8F728FB9F3900E56FF8 /* PPCatalystPlugin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33E241D925F9C14300CEED3B /* PPCatalystPlugin.bundle */; };
 		33E241F025F9C20C00CEED3B /* PPCatalystPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E241EF25F9C20C00CEED3B /* PPCatalystPlugin.m */; };
 /* End PBXBuildFile section */
 
@@ -129,7 +128,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3315A8F728FB9F3900E56FF8 /* PPCatalystPlugin.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,10 +300,10 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
-				EXCLUDED_ARCHS = "x86_64 arm64";
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PPCatalystPlugin/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -327,11 +325,11 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = "";
-				EXCLUDED_ARCHS = "x86_64 arm64";
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/PPCatalystPlugin/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

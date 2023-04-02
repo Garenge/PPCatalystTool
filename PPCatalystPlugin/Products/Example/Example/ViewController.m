@@ -45,7 +45,9 @@
 //        NSLog(@"文件大小: %ld", data.length);
 //    }
 
-    [self selectSingleFileWithFolderPath:@"/Users/pengpeng/Desktop/Example"];
+    NSString *path = @"/Users/garenge/Desktop";
+    [self selectFolderWithPath:path];
+//    [self openFileOrDirWithPath: path];
 #endif
 }
 
@@ -53,10 +55,15 @@ static NSString *bundleFileName = @"PPCatalystPlugin.bundle";
 static NSString *bundlePluginClassName = @"PPCatalystPlugin";
 
 - (Class)getBundleClassWithName:(NSString *)className {
-    NSURL *bundleURL = [[[NSBundle mainBundle] builtInPlugInsURL] URLByAppendingPathComponent:bundleFileName];
+    NSURL *bundleURL;
+    bundleURL = [[[NSBundle mainBundle] builtInPlugInsURL] URLByAppendingPathComponent:bundleFileName];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:bundleURL.path]) {
+        bundleURL = [[[NSBundle mainBundle] resourceURL] URLByAppendingPathComponent:bundleFileName];
+    }
     if (!bundleURL) {
         return nil;
     }
+    NSLog(@"Get bundleURL: %@", bundleURL);
     NSBundle *bundle = [NSBundle bundleWithURL:bundleURL];
     Class bundleClass= [bundle classNamed:className];
     return bundleClass;
@@ -88,6 +95,22 @@ static NSString *bundlePluginClassName = @"PPCatalystPlugin";
     NSLog(@"我选中了%@", selectedFileURL);
     NSData *data = [NSData dataWithContentsOfURL:selectedFileURL];
     NSLog(@"文件大小: %ld", data.length);
+
+    return selectedFileURL;
+#else
+    return nil;
+#endif
+}
+
+- (NSURL *)selectFolderWithPath:(NSString *)folderPath {
+
+#if TARGET_OS_MACCATALYST
+    NSString *selectorString = @"selectFolderWithPath:";
+
+    Class bundleClass= [self getBundleClassWithName:bundlePluginClassName];
+
+    NSURL *selectedFileURL = [self performSelfMethodWithString:selectorString target:bundleClass object:folderPath];
+    NSLog(@"我选中了%@", selectedFileURL);
 
     return selectedFileURL;
 #else

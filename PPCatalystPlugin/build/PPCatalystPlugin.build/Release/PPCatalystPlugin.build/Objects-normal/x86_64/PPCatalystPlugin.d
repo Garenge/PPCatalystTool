@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/pengpeng/Downloads/Develop/PPCatalystPlugin/PPCatalystPlugin/PPCatalystPlugin/PPCatalystPlugin.m \
-  /Users/pengpeng/Downloads/Develop/PPCatalystPlugin/PPCatalystPlugin/PPCatalystPlugin/PPCatalystPlugin.h
+  /Users/garenge/Downloads/Develop/PPCatalystTool/PPCatalystPlugin/PPCatalystPlugin/PPCatalystPlugin.m \
+  /Users/garenge/Downloads/Develop/PPCatalystTool/PPCatalystPlugin/PPCatalystPlugin/PPCatalystPlugin.h
