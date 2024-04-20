@@ -78,16 +78,14 @@ static PPCatalystHandle *_instance;
     return bundleClass;
 }
 
-- (BOOL)openFileOrDirWithPath:(NSString *)path {
+- (NSNumber *)openFileOrDirWithPath:(NSString *)path {
 
 #if TARGET_OS_MACCATALYST
     NSString *selectorString = @"openFileOrDirWithPath:";
 
     Class bundleClass= [self getBundleClassWithName:bundlePluginClassName];
 
-    BOOL result = [self performSelfMethodWithString:selectorString target:bundleClass object:path];
-
-    return result;
+    return [self performSelfMethodWithString:selectorString target:bundleClass object:path];
 #else
     return NO;
 #endif

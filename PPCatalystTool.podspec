@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
     pluginBundlePath = "PPCatalystPlugin/Products/PPCatalystPlugin.bundle"
 
     spec.name         = "PPCatalystTool"
-    spec.version      = "1.0.2"
+    spec.version      = "1.0.3"
     spec.summary      = "Tools for run iOS on Mac Catalyst"
     spec.description  = <<-DESC
     Call AppKit in iOS, by catalyst plugin.

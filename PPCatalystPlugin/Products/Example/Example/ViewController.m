@@ -46,8 +46,8 @@
 //    }
 
     NSString *path = @"/Users/garenge/Desktop";
-    [self selectFolderWithPath:path];
-//    [self openFileOrDirWithPath: path];
+//    [self selectFolderWithPath:path];
+    [self openFileOrDirWithPath:@"~/Desktop"];
 #endif
 }
 
@@ -71,12 +71,15 @@ static NSString *bundlePluginClassName = @"PPCatalystPlugin";
 
 - (BOOL)openFileOrDirWithPath:(NSString *)path {
 
+    NSLog(@"======== openFileOrDirWithPath: %@", path);
+    NSString *path1 = path;
+    NSLog(@"======== openFileOrDirWithPath: %@", path);
 #if TARGET_OS_MACCATALYST
     NSString *selectorString = @"openFileOrDirWithPath:";
 
     Class bundleClass= [self getBundleClassWithName:bundlePluginClassName];
 
-    BOOL result = [self performSelfMethodWithString:selectorString target:bundleClass object:path];
+    BOOL result = [self performSelfFuncWithString:selectorString target:bundleClass object:path1];
 
     return result;
 #else

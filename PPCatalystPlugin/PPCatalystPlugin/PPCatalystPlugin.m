@@ -9,12 +9,12 @@
 
 @implementation PPCatalystPlugin
 
-- (BOOL)openFileOrDirWithPath:(NSString *)path {
+- (NSNumber *)openFileOrDirWithPath:(NSString *)path {
     [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:@[[NSURL fileURLWithPath:path]]];
-    return YES;
+    return @(YES);
 }
 
-+ (BOOL)openFileOrDirWithPath:(NSString *)path {
++ (NSNumber *)openFileOrDirWithPath:(NSString *)path {
     return [[self new] openFileOrDirWithPath:path];
 }
 

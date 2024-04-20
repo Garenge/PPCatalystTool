@@ -21,7 +21,12 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
-    [[PPCatalystHandle sharedPPCatalystHandle] selectSingleFileWithFolderPath:@""];
+    NSURL *fileUrl = [[PPCatalystHandle sharedPPCatalystHandle] selectSingleFileWithFolderPath:@""];
+    NSString *filePath = fileUrl.absoluteString;
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[PPCatalystHandle sharedPPCatalystHandle] openFileOrDirWithPath:filePath];
+    });
 }
 
 
