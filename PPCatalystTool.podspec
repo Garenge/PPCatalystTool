@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |spec|
 
-    xcFrameworkPath = "PPCatalystTool/Products/PPCatalystTool.xcframework"
+    # xcFrameworkPath = "PPCatalystTool/Products/PPCatalystTool.xcframework"
     pluginBundlePath = "PPCatalystPlugin/Products/PPCatalystPlugin.bundle"
 
     spec.name         = "PPCatalystTool"
-    spec.version      = "1.0.3"
+    spec.version      = "1.0.4"
     spec.summary      = "Tools for run iOS on Mac Catalyst"
     spec.description  = <<-DESC
     Call AppKit in iOS, by catalyst plugin.
@@ -22,7 +22,10 @@ Pod::Spec.new do |spec|
     spec.author       = { "Garenge" => "garenge@outlook.com" }
     spec.source       = { :git => "https://github.com/Mensaoers/PPCatalystTool.git", :tag => spec.version.to_s }
     # spec.source_files = "PPCatalystTool.xcframework/ios-arm64_armv7/PPCatalystTool.framework/**/*.h"
-    spec.public_header_files = "PPCatalystTool/Products/PPCatalystTool.xcframework/ios-arm64/PPCatalystTool.framework/**/*.h"
+    # spec.public_header_files = "PPCatalystTool/Products/PPCatalystTool.xcframework/ios-arm64/PPCatalystTool.framework/**/*.h"
+
+    spec.source_files = 'PPCatalystTool/PPCatalystTool/**/*'
+    spec.public_header_files = "PPCatalystTool/PPCatalystTool/**/*.h"
 
     spec.ios.deployment_target = "11.0"
 
@@ -32,6 +35,6 @@ Pod::Spec.new do |spec|
     }
 
     spec.resources = pluginBundlePath
-    spec.vendored_frameworks = xcFrameworkPath
+    # spec.vendored_frameworks = xcFrameworkPath
 
 end
