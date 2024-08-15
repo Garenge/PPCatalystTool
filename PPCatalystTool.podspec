@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
 
     spec.pod_target_xcconfig = {
         'SUPPORTS_MACCATALYST' => 'YES',
-        'DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER' => 'NO',
+        'DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER' => 'YES',
     }
 
     spec.resources = pluginBundlePath

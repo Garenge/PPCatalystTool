@@ -6,27 +6,22 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		F343808A707AB3BDFB01DD96DBEA683C /* PPCatalystTool */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 1B889A4EC3B0F351233A504365279C35 /* Build configuration list for PBXAggregateTarget "PPCatalystTool" */;
-			buildPhases = (
-				95DF1B2D558FE2018AC76C751F09A76E /* [CP] Copy XCFrameworks */,
-			);
-			dependencies = (
-			);
-			name = PPCatalystTool;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		62FEC9868C21828038ADBAA7EC520B08 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE3E54532C3D9884A04A5E4489AB6B /* Pods-Example-dummy.m */; };
+		330D23C49E4F1D476C4AABA3BFBAB905 /* PPCatalystTool.docc in Sources */ = {isa = PBXBuildFile; fileRef = 27EAB759F6DCC305AA6982F64F3F997A /* PPCatalystTool.docc */; };
+		62FEC9868C21828038ADBAA7EC520B08 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */; };
+		7C34AC7E6B79863ACD913AF43D77BBB2 /* PPCatalystTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FF50C9A47B454BEEECAAB323CB8ADE /* PPCatalystTool-dummy.m */; };
+		80FCDF52072738E04EC8B7FDCDC72C7D /* PPCatalystTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C9B4CF876C58C968AAFF30B369C59D /* PPCatalystTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F9AFA6EA16DEE292C9F819B4690625C /* PPCatalystHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 34448F539539BC3AD8C27DC88DD058C6 /* PPCatalystHandle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A957D871BF984CA55611C1451104F753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		D8A8FCFC865EEFA066D28AE19B6346F2 /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E09B2C7823A0D1CC8850CA739F8BE364 /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B53EBBA9DD0736367FA378E07185F6ED /* PPCatalystPlugin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A0168F1764731BDC03A1D9033DDAD6B3 /* PPCatalystPlugin.bundle */; };
+		D66A606921A8B5A5E8F58251536339BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D8A8FCFC865EEFA066D28AE19B6346F2 /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8E337015D3B4A38C07AD5C321944CA6 /* PPCatalystTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B17B5C141308A9CD07862512F4FF29D /* PPCatalystTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E576F205865F567ECB86AC2A85CE6657 /* PPCatalystHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B17C87ABB5CAE4F36A66D147D3779F /* PPCatalystHandle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5EBEFE65BB3D1D21222D88C9E6F1EBE9 /* PBXContainerItemProxy */ = {
+		F5BBF2139C9E271A49EB4DD3D837D0BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -36,25 +31,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0888B5DE75EC09D59122F05FF1CA81FC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		1E3040E89BF858EAB95AE6668DC9E458 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		01FF50C9A47B454BEEECAAB323CB8ADE /* PPCatalystTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PPCatalystTool-dummy.m"; sourceTree = "<group>"; };
+		0CB60F0A1C76E5183204AFCD1C90C89C /* PPCatalystTool-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PPCatalystTool-prefix.pch"; sourceTree = "<group>"; };
 		1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Example"; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		22912CEFC8AC9A7B3E1B7983644DBDD2 /* PPCatalystTool.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PPCatalystTool.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		28EAED51BB5161D5BD372FB1C977BEDC /* PPCatalystTool-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "PPCatalystTool-xcframeworks.sh"; sourceTree = "<group>"; };
-		30AE584AD81F8EE31D36BC1B56D75016 /* Pods-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-Info.plist"; sourceTree = "<group>"; };
-		359C96EC044894AAAD09208F8E9427EA /* PPCatalystPlugin.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PPCatalystPlugin.bundle; path = PPCatalystPlugin/Products/PPCatalystPlugin.bundle; sourceTree = "<group>"; };
-		37BCA58A48DCED5B67CFBD435F7D8257 /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4FFE3E54532C3D9884A04A5E4489AB6B /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		27EAB759F6DCC305AA6982F64F3F997A /* PPCatalystTool.docc */ = {isa = PBXFileReference; includeInIndex = 1; name = PPCatalystTool.docc; path = PPCatalystTool/PPCatalystTool/PPCatalystTool.docc; sourceTree = "<group>"; };
+		31C1D37707DFAA5E6A164BCC07834264 /* Pods-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-Info.plist"; sourceTree = "<group>"; };
+		34448F539539BC3AD8C27DC88DD058C6 /* PPCatalystHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PPCatalystHandle.h; path = PPCatalystTool/PPCatalystTool/PPCatalystHandle.h; sourceTree = "<group>"; };
+		35C305D3797C284E6F5BAA1D3E6F9BF8 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		380518D9E399C574139CE77500813482 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		441854E35F81731E63E53DC7E4EEAD9D /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		47AA0837805F9715435A63322F682A06 /* PPCatalystTool */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PPCatalystTool; path = PPCatalystTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AB09E0FD8ACBED2485DA4AE41CB07AD /* PPCatalystTool.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PPCatalystTool.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		54B17C87ABB5CAE4F36A66D147D3779F /* PPCatalystHandle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PPCatalystHandle.m; path = PPCatalystTool/PPCatalystTool/PPCatalystHandle.m; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7BD1FE71A430758768FE079990132C21 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7D7C3E3D7869B75A94114024FA2364CA /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
-		9A406288AA85648C5932F328355291E6 /* PPCatalystTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PPCatalystTool.release.xcconfig; sourceTree = "<group>"; };
+		7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
+		7B17B5C141308A9CD07862512F4FF29D /* PPCatalystTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PPCatalystTool.h; path = PPCatalystTool/PPCatalystTool/PPCatalystTool.h; sourceTree = "<group>"; };
+		86430E082B64DC735D96758AB044B677 /* PPCatalystTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PPCatalystTool.release.xcconfig; sourceTree = "<group>"; };
+		909391274FD2AE918BD58C5E713CB929 /* PPCatalystTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PPCatalystTool.debug.xcconfig; sourceTree = "<group>"; };
+		9548731EF10F5AF520062A69F4E51007 /* PPCatalystTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PPCatalystTool.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B46D12E32F05C4C695851C666EC9DCF8 /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
-		B48E304ED8FE4081AF1A941D8695404A /* PPCatalystTool.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = PPCatalystTool.xcframework; path = PPCatalystTool/Products/PPCatalystTool.xcframework; sourceTree = "<group>"; };
-		D8B960460DA1F22F24F96DBD1E108BCC /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E09B2C7823A0D1CC8850CA739F8BE364 /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
-		F180D08DF8F22723D0D95DF1F3A36BE1 /* PPCatalystTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PPCatalystTool.debug.xcconfig; sourceTree = "<group>"; };
+		A0168F1764731BDC03A1D9033DDAD6B3 /* PPCatalystPlugin.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PPCatalystPlugin.bundle; path = PPCatalystPlugin/Products/PPCatalystPlugin.bundle; sourceTree = "<group>"; };
+		A0815936F9FEEC61287E1CAAF4AC152A /* PPCatalystTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PPCatalystTool-Info.plist"; sourceTree = "<group>"; };
+		AFECBC24E09D0D25F822C27BD944AFD4 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
+		B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		E8C9B4CF876C58C968AAFF30B369C59D /* PPCatalystTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PPCatalystTool-umbrella.h"; sourceTree = "<group>"; };
+		EA21B344259B58996DB73382B1B1521F /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,32 +69,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7507130F2E29206E12F0795F5B0CD222 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D66A606921A8B5A5E8F58251536339BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		433C4ACAFCCB9989FB913F868EE0CD4C /* Pods-Example */ = {
+		1317663B2B757B72DE5F3B355F9A6195 /* PPCatalystTool */ = {
 			isa = PBXGroup;
 			children = (
-				7D7C3E3D7869B75A94114024FA2364CA /* Pods-Example.modulemap */,
-				37BCA58A48DCED5B67CFBD435F7D8257 /* Pods-Example-acknowledgements.markdown */,
-				D8B960460DA1F22F24F96DBD1E108BCC /* Pods-Example-acknowledgements.plist */,
-				4FFE3E54532C3D9884A04A5E4489AB6B /* Pods-Example-dummy.m */,
-				30AE584AD81F8EE31D36BC1B56D75016 /* Pods-Example-Info.plist */,
-				B46D12E32F05C4C695851C666EC9DCF8 /* Pods-Example-resources.sh */,
-				E09B2C7823A0D1CC8850CA739F8BE364 /* Pods-Example-umbrella.h */,
-				7BD1FE71A430758768FE079990132C21 /* Pods-Example.debug.xcconfig */,
-				1E3040E89BF858EAB95AE6668DC9E458 /* Pods-Example.release.xcconfig */,
+				34448F539539BC3AD8C27DC88DD058C6 /* PPCatalystHandle.h */,
+				54B17C87ABB5CAE4F36A66D147D3779F /* PPCatalystHandle.m */,
+				A0168F1764731BDC03A1D9033DDAD6B3 /* PPCatalystPlugin.bundle */,
+				27EAB759F6DCC305AA6982F64F3F997A /* PPCatalystTool.docc */,
+				7B17B5C141308A9CD07862512F4FF29D /* PPCatalystTool.h */,
+				EC4512DA8386CCB08AE686396D85AF1F /* Pod */,
+				F28F7B3AF71F3512ACA0DB8D973AA968 /* Support Files */,
 			);
-			name = "Pods-Example";
-			path = "Target Support Files/Pods-Example";
-			sourceTree = "<group>";
-		};
-		57154274EC146FE9C98743DB36E52A70 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */,
-			);
-			name = Products;
+			name = PPCatalystTool;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -102,50 +103,44 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		58E8D5E2625D5B9BF7B2BE5A449D9C83 /* Frameworks */ = {
+		83E3FAA92EA9517880E602F8D34F5CAB /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B48E304ED8FE4081AF1A941D8695404A /* PPCatalystTool.xcframework */,
+				1317663B2B757B72DE5F3B355F9A6195 /* PPCatalystTool */,
 			);
-			name = Frameworks;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		9C7D4B7A067C1858FD581B7BB2C9254F /* PPCatalystTool */ = {
+		880D88EC9826259D74BA2917B1407D1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				359C96EC044894AAAD09208F8E9427EA /* PPCatalystPlugin.bundle */,
-				58E8D5E2625D5B9BF7B2BE5A449D9C83 /* Frameworks */,
-				A9FABF1003F9C52134A08E8E184145D7 /* Pod */,
-				AEC4B6DA3E6DD5D7494B84598A9881C1 /* Support Files */,
+				1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */,
+				47AA0837805F9715435A63322F682A06 /* PPCatalystTool */,
 			);
-			name = PPCatalystTool;
-			path = ../..;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		A9FABF1003F9C52134A08E8E184145D7 /* Pod */ = {
+		9BDBD95ED116334D1B2835202D8D3060 /* Pods-Example */ = {
 			isa = PBXGroup;
 			children = (
-				22912CEFC8AC9A7B3E1B7983644DBDD2 /* PPCatalystTool.podspec */,
-				0888B5DE75EC09D59122F05FF1CA81FC /* README.md */,
+				35C305D3797C284E6F5BAA1D3E6F9BF8 /* Pods-Example.modulemap */,
+				441854E35F81731E63E53DC7E4EEAD9D /* Pods-Example-acknowledgements.markdown */,
+				EA21B344259B58996DB73382B1B1521F /* Pods-Example-acknowledgements.plist */,
+				D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */,
+				AFECBC24E09D0D25F822C27BD944AFD4 /* Pods-Example-frameworks.sh */,
+				31C1D37707DFAA5E6A164BCC07834264 /* Pods-Example-Info.plist */,
+				7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */,
+				B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */,
+				243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		AEC4B6DA3E6DD5D7494B84598A9881C1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				28EAED51BB5161D5BD372FB1C977BEDC /* PPCatalystTool-xcframeworks.sh */,
-				F180D08DF8F22723D0D95DF1F3A36BE1 /* PPCatalystTool.debug.xcconfig */,
-				9A406288AA85648C5932F328355291E6 /* PPCatalystTool.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/PPCatalystTool";
+			name = "Pods-Example";
+			path = "Target Support Files/Pods-Example";
 			sourceTree = "<group>";
 		};
 		CE2E825F08D3AD0FD76E6D78D7512ED0 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				433C4ACAFCCB9989FB913F868EE0CD4C /* Pods-Example */,
+				9BDBD95ED116334D1B2835202D8D3060 /* Pods-Example */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -154,9 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				F612679D5ECAABAE37257B308D46A195 /* Development Pods */,
+				83E3FAA92EA9517880E602F8D34F5CAB /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				57154274EC146FE9C98743DB36E52A70 /* Products */,
+				880D88EC9826259D74BA2917B1407D1B /* Products */,
 				CE2E825F08D3AD0FD76E6D78D7512ED0 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -169,17 +164,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F612679D5ECAABAE37257B308D46A195 /* Development Pods */ = {
+		EC4512DA8386CCB08AE686396D85AF1F /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				9C7D4B7A067C1858FD581B7BB2C9254F /* PPCatalystTool */,
+				4AB09E0FD8ACBED2485DA4AE41CB07AD /* PPCatalystTool.podspec */,
+				380518D9E399C574139CE77500813482 /* README.md */,
 			);
-			name = "Development Pods";
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F28F7B3AF71F3512ACA0DB8D973AA968 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9548731EF10F5AF520062A69F4E51007 /* PPCatalystTool.modulemap */,
+				01FF50C9A47B454BEEECAAB323CB8ADE /* PPCatalystTool-dummy.m */,
+				A0815936F9FEEC61287E1CAAF4AC152A /* PPCatalystTool-Info.plist */,
+				0CB60F0A1C76E5183204AFCD1C90C89C /* PPCatalystTool-prefix.pch */,
+				E8C9B4CF876C58C968AAFF30B369C59D /* PPCatalystTool-umbrella.h */,
+				909391274FD2AE918BD58C5E713CB929 /* PPCatalystTool.debug.xcconfig */,
+				86430E082B64DC735D96758AB044B677 /* PPCatalystTool.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PPCatalystTool";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		B0A7DEB0EAD86DBCF7E3D382F303A3CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9AFA6EA16DEE292C9F819B4690625C /* PPCatalystHandle.h in Headers */,
+				D8E337015D3B4A38C07AD5C321944CA6 /* PPCatalystTool.h in Headers */,
+				80FCDF52072738E04EC8B7FDCDC72C7D /* PPCatalystTool-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C39C4B5F897AABE29DFDA4EA5E070762 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,11 +224,29 @@
 			buildRules = (
 			);
 			dependencies = (
-				FC0289996C4F5C91051BDD9787B24D23 /* PBXTargetDependency */,
+				C7529C0F45EA010048E94ED9FA99832E /* PBXTargetDependency */,
 			);
 			name = "Pods-Example";
 			productName = Pods_Example;
 			productReference = 1F667CC0E19EAF34E5A4119E2121F585 /* Pods-Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		F343808A707AB3BDFB01DD96DBEA683C /* PPCatalystTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 252A827268ED7E888E4B8E9ACA58B159 /* Build configuration list for PBXNativeTarget "PPCatalystTool" */;
+			buildPhases = (
+				B0A7DEB0EAD86DBCF7E3D382F303A3CB /* Headers */,
+				6D2E996C884ACCCB4F55124A4743ACC2 /* Sources */,
+				7507130F2E29206E12F0795F5B0CD222 /* Frameworks */,
+				FABF6E56CCDB6948BDB0C1EB28CB5C80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PPCatalystTool;
+			productName = PPCatalystTool;
+			productReference = 47AA0837805F9715435A63322F682A06 /* PPCatalystTool */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -216,8 +255,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -228,7 +267,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 57154274EC146FE9C98743DB36E52A70 /* Products */;
+			productRefGroup = 880D88EC9826259D74BA2917B1407D1B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -246,29 +285,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		95DF1B2D558FE2018AC76C751F09A76E /* [CP] Copy XCFrameworks */ = {
-			isa = PBXShellScriptBuildPhase;
+		FABF6E56CCDB6948BDB0C1EB28CB5C80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/PPCatalystTool/PPCatalystTool-xcframeworks-input-files.xcfilelist",
-			);
-			name = "[CP] Copy XCFrameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/PPCatalystTool/PPCatalystTool-xcframeworks-output-files.xcfilelist",
+				B53EBBA9DD0736367FA378E07185F6ED /* PPCatalystPlugin.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/PPCatalystTool/PPCatalystTool-xcframeworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
-/* End PBXShellScriptBuildPhase section */
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6D2E996C884ACCCB4F55124A4743ACC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E576F205865F567ECB86AC2A85CE6657 /* PPCatalystHandle.m in Sources */,
+				330D23C49E4F1D476C4AABA3BFBAB905 /* PPCatalystTool.docc in Sources */,
+				7C34AC7E6B79863ACD913AF43D77BBB2 /* PPCatalystTool-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A24A5B50985AF004734EEEF31F10EDEB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,18 +317,52 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FC0289996C4F5C91051BDD9787B24D23 /* PBXTargetDependency */ = {
+		C7529C0F45EA010048E94ED9FA99832E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PPCatalystTool;
 			target = F343808A707AB3BDFB01DD96DBEA683C /* PPCatalystTool */;
-			targetProxy = 5EBEFE65BB3D1D21222D88C9E6F1EBE9 /* PBXContainerItemProxy */;
+			targetProxy = F5BBF2139C9E271A49EB4DD3D837D0BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		29BC21BD8AED81C43927AEFA00592912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 909391274FD2AE918BD58C5E713CB929 /* PPCatalystTool.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PPCatalystTool/PPCatalystTool-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PPCatalystTool/PPCatalystTool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PPCatalystTool/PPCatalystTool.modulemap";
+				PRODUCT_MODULE_NAME = PPCatalystTool;
+				PRODUCT_NAME = PPCatalystTool;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		2A068DE4A836AB24DA4C6121EF27BCAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E3040E89BF858EAB95AE6668DC9E458 /* Pods-Example.release.xcconfig */;
+			baseConfigurationReference = 243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -329,7 +400,7 @@
 		};
 		2F558F2216D230CADE117245DD7DDD49 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BD1FE71A430758768FE079990132C21 /* Pods-Example.debug.xcconfig */;
+			baseConfigurationReference = B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -426,38 +497,38 @@
 			};
 			name = Release;
 		};
-		B664AADF1401A699C7BD21948D328932 /* Debug */ = {
+		DE9EC7D9780C9D6B461FA8350B19BF99 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F180D08DF8F22723D0D95DF1F3A36BE1 /* PPCatalystTool.debug.xcconfig */;
+			baseConfigurationReference = 86430E082B64DC735D96758AB044B677 /* PPCatalystTool.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PPCatalystTool/PPCatalystTool-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PPCatalystTool/PPCatalystTool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = "Target Support Files/PPCatalystTool/PPCatalystTool.modulemap";
+				PRODUCT_MODULE_NAME = PPCatalystTool;
+				PRODUCT_NAME = PPCatalystTool;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		EADEAA0361A6926DC310ED7DF660A141 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A406288AA85648C5932F328355291E6 /* PPCatalystTool.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -530,11 +601,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B889A4EC3B0F351233A504365279C35 /* Build configuration list for PBXAggregateTarget "PPCatalystTool" */ = {
+		252A827268ED7E888E4B8E9ACA58B159 /* Build configuration list for PBXNativeTarget "PPCatalystTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B664AADF1401A699C7BD21948D328932 /* Debug */,
-				EADEAA0361A6926DC310ED7DF660A141 /* Release */,
+				29BC21BD8AED81C43927AEFA00592912 /* Debug */,
+				DE9EC7D9780C9D6B461FA8350B19BF99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

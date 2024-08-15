@@ -15,7 +15,22 @@
 		3315A8E828FB254000E56FF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3315A8E628FB254000E56FF8 /* LaunchScreen.storyboard */; };
 		3315A8EB28FB254000E56FF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3315A8EA28FB254000E56FF8 /* main.m */; };
 		5EA636F2EF520045FD42112A /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A7A97EAB97AB86670B0AC5 /* Pods_Example.framework */; };
+		9D8AA4CD2C6E4DFC00232F84 /* PPCatalystPlugin.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 9D8AA4CC2C6E4DFC00232F84 /* PPCatalystPlugin.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9D8AA4CE2C6E4DFC00232F84 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9D8AA4CD2C6E4DFC00232F84 /* PPCatalystPlugin.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3315A8D528FB253E00E56FF8 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +47,7 @@
 		3315A8EA28FB254000E56FF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3315A8F128FB255100E56FF8 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 		64A7A97EAB97AB86670B0AC5 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8AA4CC2C6E4DFC00232F84 /* PPCatalystPlugin.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PPCatalystPlugin.bundle; path = ../PPCatalystPlugin/Products/PPCatalystPlugin.bundle; sourceTree = "<group>"; };
 		EC0004B2A3B2849C569B5FD9 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FB7B5DD25D7FD7A4CE649AE7 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				64A7A97EAB97AB86670B0AC5 /* Pods_Example.framework */,
+				9D8AA4CC2C6E4DFC00232F84 /* PPCatalystPlugin.bundle */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,7 +130,8 @@
 				3315A8D128FB253E00E56FF8 /* Sources */,
 				3315A8D228FB253E00E56FF8 /* Frameworks */,
 				3315A8D328FB253E00E56FF8 /* Resources */,
-				DAB15DB46FB1B1929BFEBF6E /* [CP] Copy Pods Resources */,
+				AB9A8CB6F32EE5B63D9FE284 /* [CP] Embed Pods Frameworks */,
+				9D8AA4CE2C6E4DFC00232F84 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -192,21 +210,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DAB15DB46FB1B1929BFEBF6E /* [CP] Copy Pods Resources */ = {
+		AB9A8CB6F32EE5B63D9FE284 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
