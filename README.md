@@ -35,4 +35,6 @@
 2. 将`PPCatalystTool`和`PPCatalystPlugin`目录下的`Products`里面的`xcframework`和`bundle`都拖到项目中
 3. 将`bundle`和`PPCatalystTool`中的`PPCatalystHandle`类拖到项目中
 
+> 弃用XCFramework, 跑Example, 如果不能打开bundle, 提示teamid不一致, 可以手动把bundle拖到当前主项目的general-> Frameworks, Libraries, and Embedded Content , 改为 embed & sign
+
 > 具体使用参照`Example`代码
