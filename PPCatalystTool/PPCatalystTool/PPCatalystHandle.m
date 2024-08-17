@@ -37,40 +37,54 @@ static PPCatalystHandle *_instance;
     return _instance;
 }
 
-- (NSBundle *)searchBundleWithBundleName:(NSString *)bundleName ofType:(NSString *)ext {
-
+- (NSBundle *)searchBundleWithBundleName:(NSString *)bundleName caseType:(NSInteger)caseType isStop:(BOOL *)isStop {
+    
     NSBundle *bundle;
-
-    NSURL *bundleURL = [[[NSBundle mainBundle] builtInPlugInsURL] URLByAppendingPathComponent:bundleFileName];
-    NSLog(@"bundleURL.path: %@", bundleURL.path);
-    if (bundleURL) {
-        bundle = [NSBundle bundleWithURL:bundleURL];
-        if (bundle) {
-            return bundle;
+    NSURL *bundleURL;
+    switch (caseType) {
+        case 0: {
+            bundleURL = [[[NSBundle mainBundle] builtInPlugInsURL] URLByAppendingPathComponent:bundleFileName];
         }
+            break;
+        case 1: {
+            NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:nil];
+            if (nil == bundlePath || bundlePath.length == 0) {
+                bundleURL = [[NSBundle mainBundle] bundleURL];
+                NSLog(@"bundleURL.path_1: %@", bundleURL.path);
+                NSURL *associateBundleURL = [bundleURL URLByAppendingPathComponent:@"Contents"];
+                associateBundleURL = [associateBundleURL URLByAppendingPathComponent:@"PlugIns"];
+                associateBundleURL = [associateBundleURL URLByAppendingPathComponent:bundleName];
+                bundleURL = associateBundleURL;
+            } else {
+                bundleURL = [NSURL fileURLWithPath:bundlePath];
+            }
+        }
+            break;
+        case 2: {
+            bundleURL = [[NSBundle mainBundle] bundleURL];
+            bundleURL = [bundleURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Contents/Frameworks/%@.framework/Resources/%@", frameworkName, bundleFileName]];
+        }
+            break;
+        default:
+            *isStop = YES;
+            break;
     }
-
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:ext];
-    if (nil == bundlePath || bundlePath.length == 0) {
-        bundleURL = [[NSBundle mainBundle] bundleURL];
-        NSLog(@"bundleURL.path_1: %@", bundleURL.path);
-        NSURL *associateBundleURL = [bundleURL URLByAppendingPathComponent:@"Contents"];
-        associateBundleURL = [associateBundleURL URLByAppendingPathComponent:@"PlugIns"];
-        associateBundleURL = [associateBundleURL URLByAppendingPathComponent:bundleName];
-        NSLog(@"associateBundleURL.path: %@", associateBundleURL.path);
-        bundle = [NSBundle bundleWithURL:associateBundleURL];
-    } else {
-        bundle = [NSBundle bundleWithPath:bundlePath];
+    NSLog(@"bundleURL.path: %@", bundleURL.path);
+    if (bundleURL && [[NSFileManager defaultManager] fileExistsAtPath:bundleURL.path]) {
+        bundle = [NSBundle bundleWithURL:bundleURL];
+        if (bundle) { *isStop = YES; }
     }
     return bundle;
 }
 
 - (Class)getBundleClassWithName:(NSString *)className {
 
-    NSBundle *bundle = [self searchBundleWithBundleName:bundleFileName ofType:nil];
-    if (!bundle) {
-        NSLog(@"获取bundle: %@失败", bundleFileName);
-        return nil;
+    NSBundle *bundle;
+    BOOL isStop = NO;
+    NSInteger step = 0;
+    while (nil == bundle && !isStop) {
+        bundle = [self searchBundleWithBundleName:bundleFileName caseType:step isStop:&isStop];
+        step += 1;
     }
     NSLog(@"bundle: %@", bundle);
     [bundle load];
