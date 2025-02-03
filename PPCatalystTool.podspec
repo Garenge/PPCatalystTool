@@ -17,10 +17,10 @@ Pod::Spec.new do |spec|
     spec.description  = <<-DESC
     Call AppKit in iOS, by catalyst plugin.
     DESC
-    spec.homepage     = "https://github.com/Mensaoers/PPCatalystTool"
+    spec.homepage     = "https://github.com/Garenge/PPCatalystTool"
     spec.license      = "MIT"
     spec.author       = { "Garenge" => "garenge@outlook.com" }
-    spec.source       = { :git => "https://github.com/Mensaoers/PPCatalystTool.git", :tag => spec.version.to_s }
+    spec.source       = { :git => "https://github.com/Garenge/PPCatalystTool.git", :tag => spec.version.to_s }
     # spec.source_files = "PPCatalystTool.xcframework/ios-arm64_armv7/PPCatalystTool.framework/**/*.h"
     # spec.public_header_files = "PPCatalystTool/Products/PPCatalystTool.xcframework/ios-arm64/PPCatalystTool.framework/**/*.h"
 
