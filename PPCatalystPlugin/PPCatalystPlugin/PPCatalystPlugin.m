@@ -41,9 +41,10 @@
     [openPanel setCanChooseDirectories:NO]; //是否能打开文件夹
     [openPanel setAllowsMultipleSelection:NO]; //是否允许多选file
 
-    [openPanel beginWithCompletionHandler:^(NSModalResponse result) {
-        
-    }];
+    // 注释掉这句话, 不然卡进程
+//    [openPanel beginWithCompletionHandler:^(NSModalResponse result) {
+//        
+//    }];
     NSInteger finded = [openPanel runModal]; //获取panel的响应
 
     if (finded == NSModalResponseOK) {
