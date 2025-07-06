@@ -141,6 +141,22 @@ static PPCatalystHandle *_instance;
 #endif
 }
 
+- (NSURL *)saveToUserDirectoryWithFilePath:(NSString *)folderPath {
+    
+#if TARGET_OS_MACCATALYST
+    NSString *selectorString = @"saveToUserDirectoryWithFilePath:";
+    
+    Class bundleClass= [self getBundleClassWithName:bundlePluginClassName];
+    
+    id result = [self performSelfMethodWithString:selectorString target:bundleClass object:folderPath];
+    NSLog(@"保存本地返回值: %@", result);
+    
+    return result;
+#else
+    return nil;
+#endif
+}
+
 /// 执行自定义方法
 - (id)performSelfMethodWithString:(NSString *)funcString target:(id)target object:(id)object {
     if (nil == funcString || funcString.length == 0) {
