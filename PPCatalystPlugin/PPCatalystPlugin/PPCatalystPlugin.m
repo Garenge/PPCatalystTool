@@ -94,4 +94,40 @@
     }
 }
 
++ (NSURL *)saveToUserDirectoryWithFilePath:(NSString *)filePath {
+    NSSavePanel *panel = [NSSavePanel savePanel];
+    panel.title = @"保存文件";
+    
+    NSString *fileName = filePath.lastPathComponent;
+    NSString *pathExtension = fileName.pathExtension;
+    if (pathExtension.length > 0) {
+        panel.allowedFileTypes = @[pathExtension];
+    } else {
+        panel.allowedFileTypes = @[];
+    }
+    
+    __block NSError *error;
+    __block NSURL *saveURL;
+    [panel beginWithCompletionHandler:^(NSModalResponse result) {
+        if (result == NSModalResponseOK) {
+            saveURL = panel.URL;
+            
+            [NSFileManager.defaultManager copyItemAtPath:filePath toPath:saveURL.path error:&error];
+            
+            //            if (error) {
+            //                NSLog(@"❌ 写入失败：%@", error.localizedDescription);
+            //            } else {
+            //                NSLog(@"✅ 保存成功：%@", saveURL.path);
+            //            }
+        }
+    }];
+    if (error || nil == saveURL) {
+        NSLog(@"❌ 写入失败：%@", error.localizedDescription);
+        return nil;
+    } else {
+        NSLog(@"✅ 保存成功：%@", saveURL.path);
+        return saveURL;
+    }
+}
+
 @end

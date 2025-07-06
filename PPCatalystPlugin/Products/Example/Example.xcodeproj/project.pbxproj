@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D6A74742E1A094F00752C52 /* PPCatalystPlugin.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 9D9370D929D9547700152C88 /* PPCatalystPlugin.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D9370C129D9545E00152C88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9370C029D9545E00152C88 /* AppDelegate.m */; };
 		9D9370C429D9545E00152C88 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9370C329D9545E00152C88 /* SceneDelegate.m */; };
 		9D9370C729D9545E00152C88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9370C629D9545E00152C88 /* ViewController.m */; };
@@ -16,6 +17,20 @@
 		9D9370D229D9545F00152C88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9370D129D9545F00152C88 /* main.m */; };
 		9D9370DA29D9547700152C88 /* PPCatalystPlugin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D9370D929D9547700152C88 /* PPCatalystPlugin.bundle */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9D6A74752E1A094F00752C52 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9D6A74742E1A094F00752C52 /* PPCatalystPlugin.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9D9370BC29D9545E00152C88 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,10 +60,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D6A74732E1A094F00752C52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D9370B329D9545E00152C88 = {
 			isa = PBXGroup;
 			children = (
 				9D9370BE29D9545E00152C88 /* Example */,
+				9D6A74732E1A094F00752C52 /* Frameworks */,
 				9D9370BD29D9545E00152C88 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +114,7 @@
 				9D9370B829D9545E00152C88 /* Sources */,
 				9D9370B929D9545E00152C88 /* Frameworks */,
 				9D9370BA29D9545E00152C88 /* Resources */,
+				9D6A74752E1A094F00752C52 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
