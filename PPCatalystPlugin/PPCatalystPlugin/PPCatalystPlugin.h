@@ -14,10 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSNumber *)openFileOrDirWithPath:(NSString *)path;
 + (NSNumber *)openFileOrDirWithPath:(NSString *)path;
-+ (NSURL *)selectSingleFileWithFolderPath:(NSString *)folderPath;
-+ (NSURL *)selectFolderWithPath:(NSString *)folderPath;
++ (nullable NSURL *)selectSingleFileWithFolderPath:(NSString *)folderPath;
++ (nullable NSURL *)selectFolderWithPath:(NSString *)folderPath;
 
-+ (NSURL *)saveToUserDirectoryWithFilePath:(NSString *)filePath;
++ (void)saveToUserDirectoryWithFilePath:(NSString *)filePath completeHandler:(void(^)(NSURL * _Nullable saveURL, NSError  * _Nullable error))completeHandler;
 
 @end
 

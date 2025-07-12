@@ -94,7 +94,11 @@
     }
 }
 
-+ (NSURL *)saveToUserDirectoryWithFilePath:(NSString *)filePath {
++ (void)saveToUserDirectoryWithFilePath:(NSString *)filePath completeHandler:(nonnull void (^)(NSURL * _Nullable, NSError * _Nullable))completeHandler {
+    
+    if (nil == completeHandler) {
+        return;
+    }
     NSSavePanel *panel = [NSSavePanel savePanel];
     panel.title = @"保存文件";
     
@@ -109,25 +113,40 @@
     __block NSError *error;
     __block NSURL *saveURL;
     [panel beginWithCompletionHandler:^(NSModalResponse result) {
-        if (result == NSModalResponseOK) {
-            saveURL = panel.URL;
-            
-            [NSFileManager.defaultManager copyItemAtPath:filePath toPath:saveURL.path error:&error];
-            
-            //            if (error) {
-            //                NSLog(@"❌ 写入失败：%@", error.localizedDescription);
-            //            } else {
-            //                NSLog(@"✅ 保存成功：%@", saveURL.path);
-            //            }
+        if (result != NSModalResponseOK) {
+            NSLog(@"已取消");
+            return;
         }
+        saveURL = panel.URL;
+        
+        if (nil == saveURL) {
+            completeHandler(nil, [NSError errorWithDomain:@"saveURL is nil" code:-1 userInfo:nil]);
+            return;
+        }
+        
+        if ([NSFileManager.defaultManager fileExistsAtPath:saveURL.path]) {
+            NSLog(@"路径文件已存在, 即将删除");
+            [NSFileManager.defaultManager removeItemAtURL:saveURL error:&error];
+            if (error) {
+                NSLog(@"移除旧文件失败");
+                completeHandler(saveURL, error);
+                return;
+            } else {
+                NSLog(@"移除旧文件成功");
+            }
+        }
+        
+        [NSFileManager.defaultManager copyItemAtPath:filePath toPath:saveURL.path error:&error];
+        
+        if (error) {
+            NSLog(@"保存文件失败");
+            completeHandler(saveURL, error);
+            return;
+        } else {
+            NSLog(@"保存操作完成");
+        }
+        completeHandler(saveURL, error);
     }];
-    if (error || nil == saveURL) {
-        NSLog(@"❌ 写入失败：%@", error.localizedDescription);
-        return nil;
-    } else {
-        NSLog(@"✅ 保存成功：%@", saveURL.path);
-        return saveURL;
-    }
 }
 
 @end

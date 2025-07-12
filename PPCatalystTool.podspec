@@ -34,7 +34,7 @@ Pod::Spec.new do |spec|
         'DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER' => 'YES',
     }
 
-    spec.resources = pluginBundlePath
+    spec.resources = [pluginBundlePath]
     # spec.vendored_frameworks = xcFrameworkPath
 
 end

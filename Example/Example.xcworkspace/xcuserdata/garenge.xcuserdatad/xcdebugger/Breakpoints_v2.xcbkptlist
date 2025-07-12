@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "428BC6E0-8A5B-4A8F-8E98-4FA4E4CE76C0"
+            uuid = "AEC3D4D0-EBE8-47F8-9413-E6954F90981F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../PPCatalystTool/PPCatalystTool/PPCatalystHandle.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-getBundleClassWithName:"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "-performSelfMethodWithString:target:object1:object2:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

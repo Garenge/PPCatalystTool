@@ -1,5 +1,5 @@
 PODS:
-  - PPCatalystTool (1.0.4)
+  - PPCatalystTool (1.0.8)
 
 DEPENDENCIES:
   - PPCatalystTool (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PPCatalystTool: 0f84b8a4559db977e5703f923301ed220b4fa942
+  PPCatalystTool: 8ed66982b3032bd3246a0b1227465af400769512
 
 PODFILE CHECKSUM: 608107cdc62d54a795e106df4a0c0b2d62065cc9
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSURL *)selectSingleFileWithFolderPath:(nonnull NSString *)folderPath;
 - (nullable NSURL *)selectFolderWithPath:(nonnull NSString *)folderPath;
 
-- (NSURL *)saveToUserDirectoryWithFilePath:(NSString *)filePath;
+- (void)saveToUserDirectoryWithFilePath:(NSString *)filePath completeHandler:(void(^)(NSURL * _Nullable saveURL, NSError  * _Nullable error))completeHandler;
 
 @end
 

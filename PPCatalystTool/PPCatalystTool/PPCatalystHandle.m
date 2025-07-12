@@ -141,19 +141,24 @@ static PPCatalystHandle *_instance;
 #endif
 }
 
-- (NSURL *)saveToUserDirectoryWithFilePath:(NSString *)folderPath {
+- (void)saveToUserDirectoryWithFilePath:(NSString *)filePath completeHandler:(void (^)(NSURL * _Nullable, NSError * _Nullable))completeHandler {
     
 #if TARGET_OS_MACCATALYST
-    NSString *selectorString = @"saveToUserDirectoryWithFilePath:";
+    NSString *selectorString = @"saveToUserDirectoryWithFilePath:completeHandler:";
     
     Class bundleClass= [self getBundleClassWithName:bundlePluginClassName];
     
-    id result = [self performSelfMethodWithString:selectorString target:bundleClass object:folderPath];
-    NSLog(@"保存本地返回值: %@", result);
+    [self performSelfMethodWithString:selectorString target:bundleClass object1:filePath object2:^(NSURL *saveURL, NSError *error) {
+        if (error) {
+            NSLog(@"保存文件失败: %@", error);
+        }
+        NSLog(@"保存本地返回值: %@", saveURL.path);
+        if (completeHandler) {
+            completeHandler(saveURL, error);
+        }
+    }];
     
-    return result;
-#else
-    return nil;
+    NSLog(@"信号返回值");
 #endif
 }
 
@@ -170,6 +175,30 @@ static PPCatalystHandle *_instance;
         IMP imp = [target methodForSelector:selector];
         id (*func)(id, SEL, id) = (void *)imp;
         return func(target, selector, object);
+    } else {
+        return nil;
+    }
+}
+
+
+/// 执行自定义方法
+- (id)performSelfMethodWithString:(NSString *)funcString target:(id)target object1:(id)object1 object2:(id)object2 {
+    if (nil == funcString || funcString.length == 0) {
+        return nil;
+    }
+    
+    SEL selector = NSSelectorFromString(funcString);
+    
+    if ([target respondsToSelector:selector]) {
+        
+        IMP imp = [target methodForSelector:selector];
+        if (object2) {
+            id (*func)(id, SEL, id, id) = (void *)imp;
+            return func(target, selector, object1, object2);
+        } else {
+            id (*func)(id, SEL, id) = (void *)imp;
+            return func(target, selector, object1);
+        }
     } else {
         return nil;
     }
