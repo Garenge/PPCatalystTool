@@ -15,5 +15,6 @@ FOUNDATION_EXPORT const unsigned char PPCatalystToolVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PPCatalystTool/PublicHeader.h>
 #import <PPCatalystTool/PPCatalystHandle.h>
+#import <PPCatalystTool/UIView+Drop.h>
 
 

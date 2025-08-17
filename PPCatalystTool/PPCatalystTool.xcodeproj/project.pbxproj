@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -26,6 +26,8 @@
 		3301B43C28FA64210063F285 /* PPCatalystHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 3301B43A28FA64210063F285 /* PPCatalystHandle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3301B43D28FA64210063F285 /* PPCatalystHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3301B43B28FA64210063F285 /* PPCatalystHandle.m */; };
 		3315A8F628FB9F2800E56FF8 /* PPCatalystPlugin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3315A8F528FB9F2800E56FF8 /* PPCatalystPlugin.bundle */; };
+		9DE589712E51A79F00EED973 /* UIView+Drop.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE589702E51A79F00EED973 /* UIView+Drop.m */; };
+		9DE589722E51A79F00EED973 /* UIView+Drop.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DE5896F2E51A79F00EED973 /* UIView+Drop.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +50,8 @@
 		3301B43A28FA64210063F285 /* PPCatalystHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCatalystHandle.h; sourceTree = "<group>"; };
 		3301B43B28FA64210063F285 /* PPCatalystHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPCatalystHandle.m; sourceTree = "<group>"; };
 		3315A8F528FB9F2800E56FF8 /* PPCatalystPlugin.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PPCatalystPlugin.bundle; path = ../../PPCatalystPlugin/Products/PPCatalystPlugin.bundle; sourceTree = "<group>"; };
+		9DE5896F2E51A79F00EED973 /* UIView+Drop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Drop.h"; sourceTree = "<group>"; };
+		9DE589702E51A79F00EED973 /* UIView+Drop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Drop.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				3301B41528FA5F6B0063F285 /* PPCatalystTool.h */,
 				3301B43A28FA64210063F285 /* PPCatalystHandle.h */,
 				3301B43B28FA64210063F285 /* PPCatalystHandle.m */,
+				9DE5896F2E51A79F00EED973 /* UIView+Drop.h */,
+				9DE589702E51A79F00EED973 /* UIView+Drop.m */,
 			);
 			path = PPCatalystTool;
 			sourceTree = "<group>";
@@ -104,6 +110,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE589722E51A79F00EED973 /* UIView+Drop.h in Headers */,
 				3301B41828FA5F6B0063F285 /* PPCatalystTool.h in Headers */,
 				3301B43C28FA64210063F285 /* PPCatalystHandle.h in Headers */,
 			);
@@ -203,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE589712E51A79F00EED973 /* UIView+Drop.m in Sources */,
 				3301B43D28FA64210063F285 /* PPCatalystHandle.m in Sources */,
 				3301B41728FA5F6B0063F285 /* PPCatalystTool.docc in Sources */,
 			);
