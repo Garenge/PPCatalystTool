@@ -141,13 +141,12 @@ static PPCatalystHandle *_instance;
 #endif
 }
 
-- (void)saveToUserDirectoryWithFilePath:(NSString *)filePath completeHandler:(void (^)(NSURL * _Nullable, NSError * _Nullable))completeHandler {
-    
+- (void)saveToUserDirectoryWithFilePath:(NSString *)filePath completeHandler:(nonnull void (^)(NSURL * _Nullable, NSError * _Nullable))completeHandler {
+
 #if TARGET_OS_MACCATALYST
     NSString *selectorString = @"saveToUserDirectoryWithFilePath:completeHandler:";
     
     Class bundleClass= [self getBundleClassWithName:bundlePluginClassName];
-    
     [self performSelfMethodWithString:selectorString target:bundleClass object1:filePath object2:^(NSURL *saveURL, NSError *error) {
         if (error) {
             NSLog(@"保存文件失败: %@", error);
@@ -181,26 +180,100 @@ static PPCatalystHandle *_instance;
 }
 
 
-/// 执行自定义方法
-- (id)performSelfMethodWithString:(NSString *)funcString target:(id)target object1:(id)object1 object2:(id)object2 {
-    if (nil == funcString || funcString.length == 0) {
-        return nil;
-    }
-    
+///// 执行自定义方法
+//- (id)performSelfMethodWithString:(NSString *)funcString target:(id)target object1:(id)object1 object2:(id)object2 {
+//    if (nil == funcString || funcString.length == 0) {
+//        return nil;
+//    }
+//    
+//    SEL selector = NSSelectorFromString(funcString);
+//    
+//    if ([target respondsToSelector:selector]) {
+//        
+//        IMP imp = [target methodForSelector:selector];
+//        if (object2) {
+//            id (*func)(id, SEL, id, id) = (void *)imp;
+//            return func(target, selector, object1, object2);
+//        } else {
+//            id (*func)(id, SEL, id) = (void *)imp;
+//            return func(target, selector, object1);
+//        }
+//    } else {
+//        return nil;
+//    }
+//}
+
+- (id)performSelfMethodWithString:(NSString *)funcString
+                           target:(id)target
+                          object1:(id)object1
+                          object2:(id)object2 {
+    if (!funcString || funcString.length == 0) return nil;
+
     SEL selector = NSSelectorFromString(funcString);
-    
-    if ([target respondsToSelector:selector]) {
-        
-        IMP imp = [target methodForSelector:selector];
-        if (object2) {
-            id (*func)(id, SEL, id, id) = (void *)imp;
-            return func(target, selector, object1, object2);
+    if (![target respondsToSelector:selector]) return nil;
+
+    NSMethodSignature *sig = [target methodSignatureForSelector:selector];
+    if (!sig) return nil;
+
+    NSInvocation *inv = [NSInvocation invocationWithMethodSignature:sig];
+    [inv setSelector:selector];
+    [inv setTarget:target];
+
+    if (sig.numberOfArguments > 2) [inv setArgument:&object1 atIndex:2];
+    if (sig.numberOfArguments > 3) [inv setArgument:&object2 atIndex:3];
+
+    [inv invoke];
+
+    if (sig.methodReturnLength) {
+        __unsafe_unretained id returnValue = nil;
+        [inv getReturnValue:&returnValue];
+        return returnValue;
+    }
+    return nil;
+}
+
+- (id)performSelector:(NSString *)funcString
+               target:(id)target
+            arguments:(NSArray *)arguments {
+    SEL selector = NSSelectorFromString(funcString);
+    NSMethodSignature *signature = [target methodSignatureForSelector:selector];
+    if (!signature) return nil;
+
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    invocation.selector = selector;
+    invocation.target = target;
+
+    // 从第2个参数开始（0 = self，1 = _cmd）
+    for (NSInteger i = 0; i < arguments.count; i++) {
+        id arg = arguments[i];
+        const char *argType = [signature getArgumentTypeAtIndex:i+2];
+
+        if (strcmp(argType, @encode(int)) == 0) {
+            int value = [arg intValue];
+            [invocation setArgument:&value atIndex:i+2];
+        } else if (strcmp(argType, @encode(double)) == 0) {
+            double value = [arg doubleValue];
+            [invocation setArgument:&value atIndex:i+2];
         } else {
-            id (*func)(id, SEL, id) = (void *)imp;
-            return func(target, selector, object1);
+            // 默认当作对象类型
+            [invocation setArgument:&arg atIndex:i+2];
         }
-    } else {
+    }
+
+    [invocation invoke];
+
+    // 返回值
+    const char *retType = signature.methodReturnType;
+    if (strcmp(retType, @encode(void)) == 0) {
         return nil;
+    } else if (strcmp(retType, @encode(int)) == 0) {
+        int result;
+        [invocation getReturnValue:&result];
+        return @(result);
+    } else {
+        __unsafe_unretained id returnValue;
+        [invocation getReturnValue:&returnValue];
+        return returnValue;
     }
 }
 
