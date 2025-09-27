@@ -20,6 +20,10 @@
 # 项目拆分
 目前代码较少, 统一存放在一个仓库中, 后期如果功能丰富, 考虑将`bundle`和`framework`分开两个项目
 
+# TODO
+- [ ] 合并 PPCatalystPlugin 到 PPCatalystTool 中，使用 podspec 命令打包成 bundle
+- [ ] 移除 xcframework 支持，简化项目结构
+
 # 发布
 1. 开发完成, 修改`PPCatalystTool.podspec`里面的版本号
 2. 提交代码, 打上对应的tag, 同步到服务器
