@@ -2,3 +2,5 @@ PPCatalystTool/PPCatalystTool.xcworkspace/xcuserdata
 PPCatalystTool/PPCatalystTool.xcworkspace/xcshareddata
 PPCatalystTool/PPCatalystTool.xcodeproj/xcuserdata
 PPCatalystPlugin/build
+*.xcuserstate
+xcuserdata
